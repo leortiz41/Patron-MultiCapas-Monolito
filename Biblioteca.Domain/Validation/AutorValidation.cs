@@ -1,17 +1,16 @@
 
- namespace Biblioteca.Domain.Validation
- {
-     public class AutorValidation : IAutorValidator
-     {
-         public required string Name { get; set; }
+using Biblioteca.Domain.Entities;
 
-        public string? Validar(Autor autor)
+namespace Biblioteca.Domain.Validation
+{
+    public class AutorValidation : IAutorValidator
+    {
+        public void Validate(Autor autor)
         {
             if (string.IsNullOrWhiteSpace(autor.Name))
             {
                 throw new ArgumentException("El nombre del autor no puede estar vacío.");
             }
-            return null;
         }
     }
 }
