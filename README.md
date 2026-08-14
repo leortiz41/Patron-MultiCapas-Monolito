@@ -1,12 +1,11 @@
 # estamos creando una solucion  para que los proyecto se referencien
 dotnet new sln -n Biblioteca
 
+# Representan los proyecto de nuestra solucion 
 
 dotnet new classlib -n Biblioteca.Domain 
 dotnet new classlib -n Biblioteca.Aplication
 dotnet new classlib -n Biblioteca.Infraestructure
-
-
 dotnet new webapi -n Biblioteca.Api
 
 # agregar todos los proyectos a la soulion 
